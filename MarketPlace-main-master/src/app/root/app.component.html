@@ -1,0 +1,50 @@
+
+ 
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg main-nav px-0">
+        <a class="navbar-brand" href="">
+					      <h3>MarketPlace</h3>
+					    </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar icon-bar-1"></span>
+                        <span class="icon-bar icon-bar-2"></span>
+                        <span class="icon-bar icon-bar-3"></span>
+                    </button>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ml-auto text-uppercase f1">
+            <li>
+              <a  routerLink="/" routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }">Каталог</a>
+            </li>
+            <li>
+              <a class="bold1" *ngIf="!authService.isLoggedIn()" routerLink="/login" routerLinkActive="active-link">Вход</a>
+            </li>
+            <li>
+              <a class="bold1" mat-button *ngIf="!authService.isLoggedIn()" routerLink="/register" routerLinkActive="active-link">Регистрация</a>
+            </li>
+
+
+            <li>
+              <a class="bold1" routerLink="/cart" *ngIf="authService.isLoggedIn()" routerLinkActive="active-link"
+              [routerLinkActiveOptions]="{ exact: true }">Корзина</a>
+            </li>
+          
+            <li>
+              <a class="bold" *ngIf="authService.isLoggedIn()" routerLink="/profile" routerLinkActive="active-link"> Профиль</a>
+            </li>
+            
+            <app-logout class='bold'>  </app-logout>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- /.container -->
+  </header>
+  
+    <router-outlet></router-outlet>
+
+
+
+  
+  

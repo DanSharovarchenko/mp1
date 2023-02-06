@@ -1,0 +1,10 @@
+
+
+
+<div class="collapse navbar-collapse" id="mainMenu">
+<ul class="navbar-nav ml-auto text-uppercase f1">
+<li>
+<a class="bold" href='/' *ngIf="authService.isLoggedIn()" (click)="logout()">Выйти из аккаунта</a>
+</li>
+</ul>
+</div>

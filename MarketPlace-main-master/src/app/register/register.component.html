@@ -1,0 +1,48 @@
+
+
+
+
+    <div class="container">
+        <div class="form-container sign-in-container">
+            <div class='ab'>
+                <h1 class="con">Регистрация</h1>
+
+                <p>
+                    <input class="firstName des" type="text" size="20" placeholder="Имя" [(ngModel)]="name" maxlength="20" minlength="1" />
+                </p>
+                <p>
+                    <input class="lastName des" type="text" size="20" placeholder="Фамилия" [(ngModel)]="surname" maxlength="20" minlength="1" />
+                </p>
+                <p>
+                    <input class="thirdName des" type="text" size="20" placeholder="Отчество" maxlength="20">
+                </p>
+                <p>
+                    <input class="mail des" type="email" size="20" placeholder="Почта" [(ngModel)]="mail" maxlength="300">
+                </p>
+                <p>
+                    <input class="phone des" type="phone" size="20" placeholder="Номер телефона" [(ngModel)]="phone" maxlength="300">
+                </p>
+
+
+                <p class="size">
+                    <input class="password1 des" name="password" type="password" placeholder="Пароль (от 10 символов)"
+                        [(ngModel)]="password" minlength="10" maxlength="300">
+                <p>
+                    <input class="password2 des" name="password" type="password" placeholder="Подтверждение пароля" [(ngModel)]="password1" minlength="10"
+                        maxlength="300">
+                <div *ngIf="incorrectPassword" style="background-color: rgb(255, 255, 255); color: rgb(255, 0, 0); width: 170px;">Пароли не совпадают</div>
+                <p>
+                    <input class="dateTime des" type='date' min='1900-01-01' max='2015-01-01'>
+                </p>
+
+                <button  (click)="register()"  routerLinkActive="active-link" >Зарегистрироваться</button>
+
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    </div>
+    
